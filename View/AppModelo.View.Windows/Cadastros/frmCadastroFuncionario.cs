@@ -1,4 +1,5 @@
-﻿using AppModelo.View.Windows.Helpers;
+﻿using AppModelo.Controller.External;
+using AppModelo.View.Windows.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,19 @@ namespace AppModelo.View.Windows.Cadastros
         {
             InitializeComponent();
             Componentes.FormatarCamposObrigatorios(this);
+        }
+
+        private void btnPesquisarCep_Click(object sender, EventArgs e)
+        {
+            //Crio a instância do Controllador
+            var cepController = new ViaCepController();
+
+            //Recebo os dados do metodos obter para o endereço
+            var endereco = cepController.Obter(txtEnderecoCep.Text);
+
+            txtEnderecoBairro.Text = endereco.Bairro;
+            txtEnderecoLogradouro.Text = endereco.Logradouro;
+            txtEnderecoMunicipio.Text = endereco.Localidade;
         }
     }
 }

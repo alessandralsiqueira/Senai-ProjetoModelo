@@ -413,6 +413,7 @@
             this.btnPesquisarCep.TabIndex = 37;
             this.btnPesquisarCep.Text = "Pesquisar";
             this.btnPesquisarCep.UseVisualStyleBackColor = true;
+            this.btnPesquisarCep.Click += new System.EventHandler(this.btnPesquisarCep_Click);
             // 
             // frmCadastroFuncionario
             // 
