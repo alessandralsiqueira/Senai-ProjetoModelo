@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,7 +67,9 @@
             this.txtEnderecoMunicipio = new System.Windows.Forms.TextBox();
             this.txtEnderecoUf = new System.Windows.Forms.TextBox();
             this.btnPesquisarCep = new System.Windows.Forms.Button();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -125,7 +128,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(319, 98);
+            this.label5.Location = new System.Drawing.Point(328, 98);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(133, 19);
             this.label5.TabIndex = 4;
@@ -145,6 +148,7 @@
             this.txtNome.Size = new System.Drawing.Size(210, 25);
             this.txtNome.TabIndex = 6;
             this.txtNome.Tag = "Obrigatorio";
+            this.txtNome.Validating += new System.ComponentModel.CancelEventHandler(this.txtNome_Validating);
             // 
             // txtCpf
             // 
@@ -154,16 +158,18 @@
             this.txtCpf.Size = new System.Drawing.Size(111, 25);
             this.txtCpf.TabIndex = 7;
             this.txtCpf.Tag = "Obrigatorio";
+            this.txtCpf.Validating += new System.ComponentModel.CancelEventHandler(this.txtCpf_Validating);
             // 
             // txtDataNascimento
             // 
-            this.txtDataNascimento.Location = new System.Drawing.Point(323, 120);
+            this.txtDataNascimento.Location = new System.Drawing.Point(332, 120);
             this.txtDataNascimento.Mask = "00/00/0000";
             this.txtDataNascimento.Name = "txtDataNascimento";
             this.txtDataNascimento.Size = new System.Drawing.Size(102, 25);
             this.txtDataNascimento.TabIndex = 8;
             this.txtDataNascimento.Tag = "Obrigatorio";
             this.txtDataNascimento.ValidatingType = typeof(System.DateTime);
+            this.txtDataNascimento.Validating += new System.ComponentModel.CancelEventHandler(this.txtDataNascimento_Validating);
             // 
             // label6
             // 
@@ -216,6 +222,7 @@
             this.txtEmail.Size = new System.Drawing.Size(221, 25);
             this.txtEmail.TabIndex = 14;
             this.txtEmail.Tag = "Obrigatorio";
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // txtEnderecoLogradouro
             // 
@@ -252,7 +259,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(458, 98);
+            this.label10.Location = new System.Drawing.Point(467, 98);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(37, 19);
             this.label10.TabIndex = 19;
@@ -415,6 +422,10 @@
             this.btnPesquisarCep.UseVisualStyleBackColor = true;
             this.btnPesquisarCep.Click += new System.EventHandler(this.btnPesquisarCep_Click);
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // frmCadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -463,6 +474,7 @@
             this.Text = "frmCadastroFuncionario";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -508,5 +520,6 @@
         private System.Windows.Forms.TextBox txtEnderecoMunicipio;
         private System.Windows.Forms.TextBox txtEnderecoUf;
         private System.Windows.Forms.Button btnPesquisarCep;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

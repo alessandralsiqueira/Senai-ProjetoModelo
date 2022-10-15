@@ -39,5 +39,10 @@ namespace AppModelo.Model.Infra.Services
             cepWrapper = JsonConvert.DeserializeObject<ViaCepWrapper>(resultContent);
             return cepWrapper;
         }
+
+        public object ObterDaApi()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
