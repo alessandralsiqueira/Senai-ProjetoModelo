@@ -19,5 +19,5 @@ namespace AppModelo.View.Windows
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmCadastroFuncionario());
         }
-    }
+    } 
 }
