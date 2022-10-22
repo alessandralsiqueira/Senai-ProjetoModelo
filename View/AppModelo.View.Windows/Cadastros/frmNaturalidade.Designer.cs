@@ -31,12 +31,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.txtDtAlteracao = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.gvNaturalidade = new System.Windows.Forms.DataGridView();
+            this.chkAtivo = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidade)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,19 +67,19 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Descrição";
             // 
-            // textBox1
+            // txtId
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 88);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 10;
+            this.txtId.Location = new System.Drawing.Point(16, 88);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.TabIndex = 10;
             // 
-            // textBox2
+            // txtDescricao
             // 
-            this.textBox2.Location = new System.Drawing.Point(153, 88);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 11;
+            this.txtDescricao.Location = new System.Drawing.Point(153, 88);
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(100, 20);
+            this.txtDescricao.TabIndex = 11;
             // 
             // btnSalvar
             // 
@@ -88,6 +89,7 @@
             this.btnSalvar.TabIndex = 12;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // txtDtAlteracao
             // 
@@ -115,17 +117,28 @@
             this.gvNaturalidade.Size = new System.Drawing.Size(429, 201);
             this.gvNaturalidade.TabIndex = 15;
             // 
+            // chkAtivo
+            // 
+            this.chkAtivo.AutoSize = true;
+            this.chkAtivo.Location = new System.Drawing.Point(153, 146);
+            this.chkAtivo.Name = "chkAtivo";
+            this.chkAtivo.Size = new System.Drawing.Size(50, 17);
+            this.chkAtivo.TabIndex = 16;
+            this.chkAtivo.Text = "Ativo";
+            this.chkAtivo.UseVisualStyleBackColor = true;
+            // 
             // frmNaturalidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(489, 450);
+            this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.gvNaturalidade);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtDtAlteracao);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDescricao);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -142,11 +155,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.MaskedTextBox txtDtAlteracao;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView gvNaturalidade;
+        private System.Windows.Forms.CheckBox chkAtivo;
     }
 }

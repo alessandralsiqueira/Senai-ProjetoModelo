@@ -1,11 +1,8 @@
-﻿using Dapper;
+﻿using AppModelo.Model.Domain.Entities;
+using Dapper;
 using MySql.Data.MySqlClient;
-using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AppModelo.Model.Infra.Repositories
 {
@@ -16,14 +13,20 @@ namespace AppModelo.Model.Infra.Repositories
             var sql = $"INSERT INTO naturalidade (descricao) VALUES ('{descricao}')";
             using IDbConnection conexaoBd = new MySqlConnection(DataBases.MySql.ConectionString());
             var resultado = conexaoBd.Execute(sql);
-            return resultado > 0; 
-        } 
-        public bool Selecionar() 
+            return resultado > 0;
+        }
+
+        public IEnumerable<NaturalidadeEntity> ObterTodos()
         {
-            var sql = "SELECT id, descricao FROM naturalidade ORDER BY descricao ASC";
+            var sql = "SELECT id, descricao, dataAlteracao, ativo FROM naturalidade ORDER BY descricao ASC";
 
             using IDbConnection conexaoBd = new MySqlConnection(DataBases.MySql.ConectionString());
-        }
+
+            var resultado = conexaoBd.Query<NaturalidadeEntity>(sql);
+
+           return resultado; 
+        } 
+
         public bool Atualizar()
         {
             return false;
@@ -33,5 +36,10 @@ namespace AppModelo.Model.Infra.Repositories
             return false;
         }
 
+        public NaturalidadeEntity ObterPorId()
+        {
+            return new NaturalidadeEntity();
+        } 
     }
+      
 }
