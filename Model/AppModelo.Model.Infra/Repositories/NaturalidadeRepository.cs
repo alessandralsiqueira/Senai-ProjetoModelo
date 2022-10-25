@@ -25,7 +25,18 @@ namespace AppModelo.Model.Infra.Repositories
             var resultado = conexaoBd.Query<NaturalidadeEntity>(sql);
 
            return resultado; 
-        } 
+        }
+
+        public IEnumerable<NaturalidadeEntity> ObterTodosAtivos()
+        {
+            var sql = "SELECT id, descricao, dataAlteracao, ativo FROM naturalidade ORDER BY descricao ASC WHERE ativo = true";
+
+            using IDbConnection conexaoBd = new MySqlConnection(DataBases.MySql.ConectionString());
+
+            var resultado = conexaoBd.Query<NaturalidadeEntity>(sql);
+
+            return resultado; 
+        }
 
         public bool Atualizar()
         {
@@ -40,6 +51,17 @@ namespace AppModelo.Model.Infra.Repositories
         {
             return new NaturalidadeEntity();
         } 
+
+        public NaturalidadeEntity ObterPorDescricao(string descricao)
+        {
+            var sql = $"SELECT id, descricao FROM naturalidade WHERE descricao = '{descricao}'";
+
+            using IDbConnection conexaoBd = new MySqlConnection(DataBases.MySql.ConectionString());
+
+            var resultado = conexaoBd.QuerySingleOrDefault<NaturalidadeEntity>(sql);
+
+            return resultado; 
+        }
     }
       
 }
