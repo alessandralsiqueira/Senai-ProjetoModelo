@@ -1,6 +1,7 @@
 ﻿using AppModelo.Model.Domain.Entities;
 using Dapper;
 using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Data;
 
@@ -8,9 +9,11 @@ namespace AppModelo.Model.Infra.Repositories
 {
     public class NaturalidadeRepository
     {
-        public bool Inserir(string descricao)
+        public bool Inserir(string descricao, bool status) 
         {
-            var sql = $"INSERT INTO naturalidade (descricao) VALUES ('{descricao}')";
+            var agora = DateTime.Now.ToString("u");
+
+            var sql = $"INSERT INTO naturalidade (descricao, dataCriacao, dataAlteracao, ativo) VALUES ('{descricao}', '{agora}', '{agora}', '{status}')";
             using IDbConnection conexaoBd = new MySqlConnection(DataBases.MySql.ConectionString());
             var resultado = conexaoBd.Execute(sql);
             return resultado > 0;
