@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AppModelo.Controller.Segurança;
+using AppModelo.Model.Domain.Validators;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,11 +19,30 @@ namespace AppModelo.View.Windows.Cadastros
             InitializeComponent();
         }
 
-        private void btnEntrar_Click(object sender, EventArgs e)
+        private void btnLogar_Click(object sender, EventArgs e)
         {
-            var form = new frmCadastroFuncionario();
-            form.Show();
-            this.Hide();
+            // 1 passo validar o email
+            var emailEhValido = Validadores.EmailEValido(txtEmail.Text);
+            if(emailEhValido is false)
+            {
+                errorProvider1.SetError(txtEmail, "Seu email está errado.");
+                txtEmail.Focus();
+                return; 
+            }
+
+            var controller = new UsuarioController();
+            var usuarioEncontrado = controller.EfetuarLogin(txtEmail.Text, txtSenha.Text);
+            if(usuarioEncontrado)
+            {
+                var form = new frmPrincipal(); 
+                form.Show();
+                this.Hide();
+
+            } 
+            else
+            {
+                MessageBox.Show("Usuário ou senha não encontrado!");
+            }
         }
 
         private void lblEsqueciMinhaSenha_Click(object sender, EventArgs e)

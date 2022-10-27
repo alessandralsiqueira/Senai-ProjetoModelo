@@ -71,6 +71,12 @@
     <Compile Include="Cadastros\frmNaturalidade.Designer.cs">
       <DependentUpon>frmNaturalidade.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cadastros\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cadastros\frmRecuperarSenha.cs">
       <SubType>Form</SubType>
     </Compile>

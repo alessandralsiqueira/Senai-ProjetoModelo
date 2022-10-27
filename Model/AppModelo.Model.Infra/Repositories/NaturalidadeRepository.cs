@@ -27,8 +27,8 @@ namespace AppModelo.Model.Infra.Repositories
 
             var resultado = conexaoBd.Query<NaturalidadeEntity>(sql);
 
-           return resultado; 
-        }
+            return resultado; 
+        } 
 
         public IEnumerable<NaturalidadeEntity> ObterTodosAtivos()
         {

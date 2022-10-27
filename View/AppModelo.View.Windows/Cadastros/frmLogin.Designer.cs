@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtEmailLogin = new System.Windows.Forms.TextBox();
-            this.txtSenhaLogin = new System.Windows.Forms.TextBox();
-            this.btnEntrar = new System.Windows.Forms.Button();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.btnLogar = new System.Windows.Forms.Button();
             this.lblEsqueciMinhaSenha = new System.Windows.Forms.Label();
             this.lblSuporteEContato = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -59,33 +62,33 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Senha";
             // 
-            // txtEmailLogin
+            // txtEmail
             // 
-            this.txtEmailLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.txtEmailLogin.Location = new System.Drawing.Point(12, 57);
-            this.txtEmailLogin.Name = "txtEmailLogin";
-            this.txtEmailLogin.Size = new System.Drawing.Size(249, 21);
-            this.txtEmailLogin.TabIndex = 2;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtEmail.Location = new System.Drawing.Point(12, 57);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(249, 21);
+            this.txtEmail.TabIndex = 2;
             // 
-            // txtSenhaLogin
+            // txtSenha
             // 
-            this.txtSenhaLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.txtSenhaLogin.Location = new System.Drawing.Point(12, 123);
-            this.txtSenhaLogin.Name = "txtSenhaLogin";
-            this.txtSenhaLogin.Size = new System.Drawing.Size(249, 21);
-            this.txtSenhaLogin.TabIndex = 3;
+            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtSenha.Location = new System.Drawing.Point(12, 123);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
+            this.txtSenha.Size = new System.Drawing.Size(249, 21);
+            this.txtSenha.TabIndex = 3;
             // 
-            // btnEntrar
+            // btnLogar
             // 
-            this.btnEntrar.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnEntrar.Location = new System.Drawing.Point(12, 222);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(249, 25);
-            this.btnEntrar.TabIndex = 4;
-            this.btnEntrar.Text = "Entrar";
-            this.btnEntrar.UseVisualStyleBackColor = false;
-            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
+            this.btnLogar.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnLogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnLogar.Location = new System.Drawing.Point(12, 222);
+            this.btnLogar.Name = "btnLogar";
+            this.btnLogar.Size = new System.Drawing.Size(249, 25);
+            this.btnLogar.TabIndex = 4;
+            this.btnLogar.Text = "Entrar";
+            this.btnLogar.UseVisualStyleBackColor = false;
             // 
             // lblEsqueciMinhaSenha
             // 
@@ -111,6 +114,10 @@
             this.lblSuporteEContato.TabIndex = 6;
             this.lblSuporteEContato.Text = "Suporte e Contato";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -119,13 +126,14 @@
             this.ClientSize = new System.Drawing.Size(295, 306);
             this.Controls.Add(this.lblSuporteEContato);
             this.Controls.Add(this.lblEsqueciMinhaSenha);
-            this.Controls.Add(this.btnEntrar);
-            this.Controls.Add(this.txtSenhaLogin);
-            this.Controls.Add(this.txtEmailLogin);
+            this.Controls.Add(this.btnLogar);
+            this.Controls.Add(this.txtSenha);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmLogin";
             this.Text = "frmLogin";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,10 +143,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtEmailLogin;
-        private System.Windows.Forms.TextBox txtSenhaLogin;
-        private System.Windows.Forms.Button btnEntrar;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtSenha;
+        private System.Windows.Forms.Button btnLogar;
         private System.Windows.Forms.Label lblEsqueciMinhaSenha;
         private System.Windows.Forms.Label lblSuporteEContato;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

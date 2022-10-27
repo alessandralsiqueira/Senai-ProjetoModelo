@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtRecuperarSenha = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnRecuperarSenha = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -45,14 +48,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Recuperar Senha";
             // 
-            // txtRecuperarSenha
+            // txtEmail
             // 
-            this.txtRecuperarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRecuperarSenha.Location = new System.Drawing.Point(23, 80);
-            this.txtRecuperarSenha.Name = "txtRecuperarSenha";
-            this.txtRecuperarSenha.Size = new System.Drawing.Size(180, 22);
-            this.txtRecuperarSenha.TabIndex = 1;
-            this.txtRecuperarSenha.Tag = "Digite seu email";
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(23, 80);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(180, 22);
+            this.txtEmail.TabIndex = 1;
+            this.txtEmail.Tag = "Digite seu email";
             // 
             // btnRecuperarSenha
             // 
@@ -63,6 +66,7 @@
             this.btnRecuperarSenha.TabIndex = 2;
             this.btnRecuperarSenha.Text = "RECUPERAR ACESSO";
             this.btnRecuperarSenha.UseVisualStyleBackColor = false;
+            this.btnRecuperarSenha.Click += new System.EventHandler(this.btnRecuperarSenha_Click);
             // 
             // btnCancelar
             // 
@@ -73,6 +77,10 @@
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmRecuperarSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -81,10 +89,11 @@
             this.ClientSize = new System.Drawing.Size(231, 233);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnRecuperarSenha);
-            this.Controls.Add(this.txtRecuperarSenha);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label1);
             this.Name = "frmRecuperarSenha";
             this.Text = "frmRecuperarSenha";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,8 +102,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtRecuperarSenha;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Button btnRecuperarSenha;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
