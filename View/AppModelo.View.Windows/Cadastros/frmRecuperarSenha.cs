@@ -1,4 +1,5 @@
-﻿using AppModelo.Model.Domain.Validators;
+﻿using AppModelo.Controller.Segurança;
+using AppModelo.Model.Domain.Validators;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,7 +27,11 @@ namespace AppModelo.View.Windows.Cadastros
                 errorProvider1.SetError(txtEmail, "Seu email está errado.");
                 txtEmail.Focus();
                 return;
-            } 
-        }
+            }
+            var controller = new UsuarioController();
+            var resultado = controller.RecuperarSenha(txtEmail.Text);
+            MessageBox.Show(resultado);
+        } 
+        
     }
 }
