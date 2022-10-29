@@ -13,10 +13,6 @@ namespace AppModelo.View.Windows
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmNaturalidade());
-
             //Adicionar manipulador para lidar com a exceção gerada pelos threads principais
             Application.ThreadException +=
             new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);

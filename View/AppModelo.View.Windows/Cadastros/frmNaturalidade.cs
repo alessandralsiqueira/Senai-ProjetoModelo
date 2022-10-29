@@ -10,6 +10,7 @@ namespace AppModelo.View.Windows.Cadastros
         public frmNaturalidade()
         {
             InitializeComponent();
+
             var listaDeNaturalidade = _naturalidadeController.ObterTodasNaturalidades();
             gvNaturalidade.DataSource = listaDeNaturalidade;
         } 

@@ -16,7 +16,7 @@ namespace AppModelo.View.Windows.Cadastros
     {
         public frmLogin()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
 
         private void btnLogar_Click(object sender, EventArgs e)
