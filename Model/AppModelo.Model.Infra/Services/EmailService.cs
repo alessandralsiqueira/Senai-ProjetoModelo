@@ -1,10 +1,7 @@
 ﻿using MailKit.Net.Smtp;
+using MailKit.Security;
 using MimeKit;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 
 namespace AppModelo.Model.Infra.Services
@@ -28,11 +25,13 @@ namespace AppModelo.Model.Infra.Services
                 using (var client = new SmtpClient())
                 {
                     client.Connect("smtp.gmail.com", 587, false);
+                    client.Connect("smtp.gmail.com", 587, SecureSocketOptions.Auto);
 
                     client.Authenticate("user_senai_temp@faceli.edu.br", "senai@2022");
+                    client.Authenticate("welton.castoldi@docente.senai.br", "thjqhgtpctrhbugt");
 
                     client.Send(mimeMensage);
-                    client.Disconnect(true);
+                    client.Disconnect(true); 
                 }
                 return true;
             }
