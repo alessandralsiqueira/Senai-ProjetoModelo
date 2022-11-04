@@ -90,5 +90,10 @@ namespace AppModelo.View.Windows.Cadastros
             var dataNascimento = DateTime.Parse(txtDataNascimento.Text);
             //DataTime.Now.AddDays(1);
         }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+             
+        }
     }
 }
