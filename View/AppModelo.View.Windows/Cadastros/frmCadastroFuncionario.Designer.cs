@@ -429,12 +429,13 @@
             // 
             // btnSalvar
             // 
+            this.btnSalvar.BackColor = System.Drawing.Color.ForestGreen;
             this.btnSalvar.Location = new System.Drawing.Point(522, 452);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(87, 32);
+            this.btnSalvar.Size = new System.Drawing.Size(116, 32);
             this.btnSalvar.TabIndex = 38;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Text = "Salvar Cadastro";
+            this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // frmCadastroFuncionario
