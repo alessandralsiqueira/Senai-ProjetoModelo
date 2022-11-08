@@ -68,7 +68,7 @@
             this.txtEnderecoUf = new System.Windows.Forms.TextBox();
             this.btnPesquisarCep = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnSalvarCadastro = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
@@ -427,23 +427,23 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
-            // btnSalvar
+            // btnSalvarCadastro
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnSalvar.Location = new System.Drawing.Point(522, 452);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(116, 32);
-            this.btnSalvar.TabIndex = 38;
-            this.btnSalvar.Text = "Salvar Cadastro";
-            this.btnSalvar.UseVisualStyleBackColor = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            this.btnSalvarCadastro.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnSalvarCadastro.Location = new System.Drawing.Point(522, 452);
+            this.btnSalvarCadastro.Name = "btnSalvarCadastro";
+            this.btnSalvarCadastro.Size = new System.Drawing.Size(116, 32);
+            this.btnSalvarCadastro.TabIndex = 38;
+            this.btnSalvarCadastro.Text = "Salvar Cadastro";
+            this.btnSalvarCadastro.UseVisualStyleBackColor = false;
+            this.btnSalvarCadastro.Click += new System.EventHandler(this.btnSalvarCadastro_Click);
             // 
             // frmCadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(697, 496);
-            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.btnSalvarCadastro);
             this.Controls.Add(this.btnPesquisarCep);
             this.Controls.Add(this.txtEnderecoUf);
             this.Controls.Add(this.txtEnderecoMunicipio);
@@ -534,6 +534,6 @@
         private System.Windows.Forms.TextBox txtEnderecoUf;
         private System.Windows.Forms.Button btnPesquisarCep;
         private System.Windows.Forms.ErrorProvider errorProvider;
-        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnSalvarCadastro;
     }
 }

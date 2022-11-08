@@ -3,17 +3,11 @@ using AppModelo.Controller.External;
 using AppModelo.Model.Domain.Validators;
 using AppModelo.View.Windows.Helpers;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppModelo.View.Windows.Cadastros
-{  
+{
     public partial class frmCadastroFuncionario : Form
     {
         private NacionalidadeController _nacionalidadeController = new NacionalidadeController();
@@ -91,9 +85,16 @@ namespace AppModelo.View.Windows.Cadastros
             //DataTime.Now.AddDays(1);
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
+        private void btnSalvarCadastro_Click(object sender, EventArgs e)
         {
-             
+            var funController = new FuncionarioController();
+            var dataNasc = Convert.ToDateTime(txtDataNascimento.Text);
+            int numero = int.Parse(txtEnderecoNumero.Text);
+            
+            //Recebo os dados do metodo obter para o endereço
+            var salvou = funController.SalvarCadastro(txtNome.Text, dataNasc, rbMasculino.Checked, txtCpf.Text, 1, 1, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text, numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text);
+            var salvou = funController.SalvarCadastro(txtNome.Text, dataNasc, rbMasculino.Checked, txtCpf.Text, cmbNacionalidade, cmbNaturalidade, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text, numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text);
+
         }
     }
 }
