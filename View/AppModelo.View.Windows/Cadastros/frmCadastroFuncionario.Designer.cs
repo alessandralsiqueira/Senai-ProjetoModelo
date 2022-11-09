@@ -311,6 +311,7 @@
             this.cmbNacionalidade.Size = new System.Drawing.Size(121, 25);
             this.cmbNacionalidade.TabIndex = 24;
             this.cmbNacionalidade.Tag = "Obrigatorio";
+            this.cmbNacionalidade.SelectedIndexChanged += new System.EventHandler(this.cmbNacionalidade_SelectedIndexChanged);
             // 
             // cmbNaturalidade
             // 
@@ -319,6 +320,7 @@
             this.cmbNaturalidade.Name = "cmbNaturalidade";
             this.cmbNaturalidade.Size = new System.Drawing.Size(121, 25);
             this.cmbNaturalidade.TabIndex = 25;
+            this.cmbNaturalidade.SelectedIndexChanged += new System.EventHandler(this.cmbNaturalidade_SelectedIndexChanged);
             // 
             // txtEnderecoCep
             // 

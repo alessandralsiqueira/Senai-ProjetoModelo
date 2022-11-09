@@ -17,12 +17,21 @@ namespace AppModelo.Controller.Cadastros
             var resposta = repositorio.Inserir(descricao);
             return resposta;
         } 
-
         public List<NacionalidadeEntity> ObterTodasNacionalidades()
         {
             var repositorio = new NacionalidadeRepository();
             var reposta = repositorio.ObterTodos();
             return (List<NacionalidadeEntity>)reposta; 
         }
+        public bool Remover(string descricao)
+        {
+            var repositorio = new NacionalidadeRepository();
+            var resposta = repositorio.Remover(descricao);
+            return resposta; 
+        }
+        /*public bool Atualizar(string descricao)
+        var repositorio = new NacionalidadeRepository();
+        var resposta = repositorio.Atualizar(descricao);
+        return resposta;*/
     }
 }

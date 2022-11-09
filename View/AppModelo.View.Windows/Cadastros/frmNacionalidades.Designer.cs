@@ -35,6 +35,7 @@
             this.gvNacionalidades = new System.Windows.Forms.DataGridView();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExcluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvNacionalidades)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,11 +100,23 @@
             this.panel1.Size = new System.Drawing.Size(562, 54);
             this.panel1.TabIndex = 6;
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnExcluir.Location = new System.Drawing.Point(344, 130);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(93, 23);
+            this.btnExcluir.TabIndex = 7;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
             // frmNacionalidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(562, 355);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.gvNacionalidades);
@@ -128,5 +141,6 @@
         private System.Windows.Forms.DataGridView gvNacionalidades;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }

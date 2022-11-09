@@ -26,7 +26,21 @@ namespace AppModelo.View.Windows.Cadastros
             else
             {
                 MessageBox.Show("Houve um erro ao salvar no banco de dados.");
+            }
+        }
 
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            var control = new NacionalidadeController();
+            var removeu = _nacionalidadeController.Remover(txtDescricao.Text);
+            if(removeu)
+            {
+                MessageBox.Show("Nacionalidade excluída com sucesso!");
+                txtDescricao.Text = string.Empty;
+            }
+            else
+            {
+                MessageBox.Show("Houve um erro ao excluir no banco de dados.");
             }
         }
     }

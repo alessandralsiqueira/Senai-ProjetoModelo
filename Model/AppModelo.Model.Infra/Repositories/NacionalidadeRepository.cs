@@ -18,13 +18,19 @@ namespace AppModelo.Model.Infra.Repositories
             var resultado = conexaoBd.Execute(sql);
             return resultado > 0; 
         }
-        public bool Atualizar() 
+        public bool Atualizar(string id, string descricao) 
         {
-            return false;
+            var sql = $"UPDATE FROM nacionalidades WHERE (id, descricao) = ('{id}','{descricao}')"; 
+            using IDbConnection conexaoBd = new MySqlConnection(DataBases.MySql.ConectionString());
+            var resultado = conexaoBd.Execute(sql);
+            return resultado > 0; 
         }
-        public bool Remover() 
+        public bool Remover(string descricao) 
         {
-            return false; 
+            var sql = $"DELETE FROM nacionalidades WHERE (descricao) = ('{descricao}')";
+            using IDbConnection conexaoBd = new MySqlConnection(DataBases.MySql.ConectionString());
+            var resultado = conexaoBd.Execute(sql);
+            return resultado > 0; 
         }
         public IEnumerable<NacionalidadeEntity> ObterTodos() 
         {
