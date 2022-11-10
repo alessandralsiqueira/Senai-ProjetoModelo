@@ -43,5 +43,13 @@ namespace AppModelo.View.Windows.Cadastros
                 MessageBox.Show("Houve um erro ao excluir no banco de dados.");
             }
         }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            var idAtual = int.Parse(txtId.Text); 
+            var controller = new NacionalidadeController();
+            var descricaoAtual = _nacionalidadeController.Atualizar(idAtual, txtDescricao.Text);
+            
+        }
     }
 }

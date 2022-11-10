@@ -18,13 +18,13 @@ namespace AppModelo.Model.Infra.Repositories
             var resultado = conexaoBd.Execute(sql);
             return resultado > 0; 
         }
-        public bool Atualizar(string id, string descricao) 
+        public bool Atualizar(int id, string descricao) 
         {
-            var sql = $"UPDATE FROM nacionalidades WHERE (id, descricao) = ('{id}','{descricao}')"; 
+            var sql = $"UPDATE nacionalidades SET descricao = ('{descricao}') WHERE id = ('{id}')"; 
             using IDbConnection conexaoBd = new MySqlConnection(DataBases.MySql.ConectionString());
             var resultado = conexaoBd.Execute(sql);
             return resultado > 0; 
-        }
+        } 
         public bool Remover(string descricao) 
         {
             var sql = $"DELETE FROM nacionalidades WHERE (descricao) = ('{descricao}')";

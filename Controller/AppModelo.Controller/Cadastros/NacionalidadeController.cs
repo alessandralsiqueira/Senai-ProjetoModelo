@@ -29,9 +29,12 @@ namespace AppModelo.Controller.Cadastros
             var resposta = repositorio.Remover(descricao);
             return resposta; 
         }
-        /*public bool Atualizar(string descricao)
-        var repositorio = new NacionalidadeRepository();
-        var resposta = repositorio.Atualizar(descricao);
-        return resposta;*/
+        public bool Atualizar(int id, string descricao)
+        {
+            var repositorio = new NacionalidadeRepository();
+            var resposta = repositorio.Atualizar(id, descricao);
+            return resposta;
+        }
+        
     }
 }

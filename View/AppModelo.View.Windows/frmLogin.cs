@@ -1,4 +1,4 @@
-﻿using AppModelo.Controller.Segurança;
+﻿  using AppModelo.Controller.Segurança;
 using AppModelo.Model.Domain.Validators;
 using System;
 using System.Collections.Generic;
