@@ -23,7 +23,7 @@ namespace AppModelo.View.Windows
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmNacionalidades());
+            Application.Run(new frmCadastroFuncionario());
 
             Environment.Exit(-1);
 

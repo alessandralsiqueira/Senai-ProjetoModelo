@@ -140,14 +140,14 @@
             this.txtId.Location = new System.Drawing.Point(12, 120);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(69, 25);
-            this.txtId.TabIndex = 5;
+            this.txtId.TabIndex = 0;
             // 
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(97, 120);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(210, 25);
-            this.txtNome.TabIndex = 6;
+            this.txtNome.TabIndex = 1;
             this.txtNome.Tag = "Obrigatorio";
             this.txtNome.Validating += new System.ComponentModel.CancelEventHandler(this.txtNome_Validating);
             // 
@@ -157,7 +157,7 @@
             this.txtCpf.Mask = "###.###.###-##";
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(111, 25);
-            this.txtCpf.TabIndex = 7;
+            this.txtCpf.TabIndex = 3;
             this.txtCpf.Tag = "Obrigatorio";
             this.txtCpf.Validating += new System.ComponentModel.CancelEventHandler(this.txtCpf_Validating);
             // 
@@ -167,7 +167,7 @@
             this.txtDataNascimento.Mask = "00/00/0000";
             this.txtDataNascimento.Name = "txtDataNascimento";
             this.txtDataNascimento.Size = new System.Drawing.Size(102, 25);
-            this.txtDataNascimento.TabIndex = 8;
+            this.txtDataNascimento.TabIndex = 2;
             this.txtDataNascimento.Tag = "Obrigatorio";
             this.txtDataNascimento.ValidatingType = typeof(System.DateTime);
             this.txtDataNascimento.Validating += new System.ComponentModel.CancelEventHandler(this.txtDataNascimento_Validating);
@@ -214,14 +214,14 @@
             this.txtTelefone.Mask = "(##)#####-####";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(100, 25);
-            this.txtTelefone.TabIndex = 13;
+            this.txtTelefone.TabIndex = 7;
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(12, 242);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(221, 25);
-            this.txtEmail.TabIndex = 14;
+            this.txtEmail.TabIndex = 6;
             this.txtEmail.Tag = "Obrigatorio";
             this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
@@ -281,7 +281,7 @@
             this.txtTelefoneContato.Mask = "(##)#####-####";
             this.txtTelefoneContato.Name = "txtTelefoneContato";
             this.txtTelefoneContato.Size = new System.Drawing.Size(113, 25);
-            this.txtTelefoneContato.TabIndex = 21;
+            this.txtTelefoneContato.TabIndex = 8;
             // 
             // label12
             // 
@@ -309,7 +309,7 @@
             this.cmbNacionalidade.Location = new System.Drawing.Point(12, 180);
             this.cmbNacionalidade.Name = "cmbNacionalidade";
             this.cmbNacionalidade.Size = new System.Drawing.Size(121, 25);
-            this.cmbNacionalidade.TabIndex = 24;
+            this.cmbNacionalidade.TabIndex = 4;
             this.cmbNacionalidade.Tag = "Obrigatorio";
             this.cmbNacionalidade.SelectedIndexChanged += new System.EventHandler(this.cmbNacionalidade_SelectedIndexChanged);
             // 
@@ -319,7 +319,7 @@
             this.cmbNaturalidade.Location = new System.Drawing.Point(163, 180);
             this.cmbNaturalidade.Name = "cmbNaturalidade";
             this.cmbNaturalidade.Size = new System.Drawing.Size(121, 25);
-            this.cmbNaturalidade.TabIndex = 25;
+            this.cmbNaturalidade.TabIndex = 5;
             this.cmbNaturalidade.SelectedIndexChanged += new System.EventHandler(this.cmbNaturalidade_SelectedIndexChanged);
             // 
             // txtEnderecoCep
@@ -328,7 +328,7 @@
             this.txtEnderecoCep.Mask = "#####-###";
             this.txtEnderecoCep.Name = "txtEnderecoCep";
             this.txtEnderecoCep.Size = new System.Drawing.Size(100, 25);
-            this.txtEnderecoCep.TabIndex = 26;
+            this.txtEnderecoCep.TabIndex = 9;
             this.txtEnderecoCep.Tag = "Obrigatorio";
             // 
             // txtEnderecoNumero
@@ -336,7 +336,7 @@
             this.txtEnderecoNumero.Location = new System.Drawing.Point(285, 367);
             this.txtEnderecoNumero.Name = "txtEnderecoNumero";
             this.txtEnderecoNumero.Size = new System.Drawing.Size(126, 25);
-            this.txtEnderecoNumero.TabIndex = 27;
+            this.txtEnderecoNumero.TabIndex = 10;
             this.txtEnderecoNumero.Tag = "Obrigatorio";
             // 
             // txtEnderecoComplemento
@@ -435,7 +435,7 @@
             this.btnSalvarCadastro.Location = new System.Drawing.Point(522, 452);
             this.btnSalvarCadastro.Name = "btnSalvarCadastro";
             this.btnSalvarCadastro.Size = new System.Drawing.Size(116, 32);
-            this.btnSalvarCadastro.TabIndex = 38;
+            this.btnSalvarCadastro.TabIndex = 11;
             this.btnSalvarCadastro.Text = "Salvar Cadastro";
             this.btnSalvarCadastro.UseVisualStyleBackColor = false;
             this.btnSalvarCadastro.Click += new System.EventHandler(this.btnSalvarCadastro_Click);

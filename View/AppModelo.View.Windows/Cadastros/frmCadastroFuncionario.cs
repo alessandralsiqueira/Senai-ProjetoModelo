@@ -20,9 +20,11 @@ namespace AppModelo.View.Windows.Cadastros
 
             cmbNacionalidade.DataSource = _nacionalidadeController.ObterTodasNacionalidades();
             cmbNacionalidade.DisplayMember = "Descricao";
+            cmbNacionalidade.ValueMember = "Id";
 
             cmbNaturalidade.DataSource = _naturalidadeController.ObterTodasNaturalidades();
             cmbNaturalidade.DisplayMember = "Descricao";
+            cmbNaturalidade.ValueMember = "Id";
         }
 
         private void btnPesquisarCep_Click(object sender, EventArgs e)
@@ -97,9 +99,9 @@ namespace AppModelo.View.Windows.Cadastros
         {
             var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
             int numero = int.Parse(txtEnderecoNumero.Text);
-            var obterIndexNacionalidade = cmbNacionalidade.SelectedIndex;
-            var obterIndexNaturalidade = cmbNaturalidade.SelectedIndex;
-
+            var obterIndexNacionalidade = Convert.ToInt32(cmbNacionalidade.SelectedValue);
+            var obterIndexNaturalidade = Convert.ToInt32(cmbNaturalidade.SelectedValue);
+      
             var salvou = _funcionarioController.Cadastrar(txtNome.Text, dataNascimento, rbMasculino.Checked,
                 txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text,
                 numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text,
@@ -122,14 +124,14 @@ namespace AppModelo.View.Windows.Cadastros
         {
             var obterIndexNacionalidade = cmbNacionalidade.SelectedIndex;
             string Index = cmbNacionalidade.Text;
-            MessageBox.Show(Index);
+            
         }
 
         private void cmbNaturalidade_SelectedIndexChanged(object sender, EventArgs e)
         {
             var obterIndexNaturalidade = cmbNaturalidade.SelectedIndex;
             string Index = cmbNaturalidade.Text;
-            MessageBox.Show(Index);
+          
         }
 
         public static void LimparDados(Control crtl)
