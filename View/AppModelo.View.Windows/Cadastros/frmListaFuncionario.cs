@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using AppModelo.Controller.Cadastros;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,12 @@ namespace AppModelo.View.Windows.Cadastros
 {
     public partial class frmListaFuncionario : Form
     {
+        private FuncionarioController _funcionarioController = new FuncionarioController();
         public frmListaFuncionario()
         {
             InitializeComponent();
+            var listaDeFuncionarios = _funcionarioController.ObterTodosFuncionarios();
+            gvFuncionario.DataSource = listaDeFuncionarios;
         }
     }
 }

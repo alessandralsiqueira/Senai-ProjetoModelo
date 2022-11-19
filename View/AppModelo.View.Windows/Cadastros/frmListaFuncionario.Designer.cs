@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.gvFuncionario = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.gvFuncionario)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // gvFuncionario
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(531, 374);
-            this.dataGridView1.TabIndex = 0;
+            this.gvFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvFuncionario.Location = new System.Drawing.Point(24, 12);
+            this.gvFuncionario.Name = "gvFuncionario";
+            this.gvFuncionario.Size = new System.Drawing.Size(531, 374);
+            this.gvFuncionario.TabIndex = 0;
             // 
             // frmListaFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(580, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.gvFuncionario);
             this.Name = "frmListaFuncionario";
             this.Text = "frmListaFuncionario";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvFuncionario)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gvFuncionario;
     }
 }

@@ -1,4 +1,5 @@
-﻿using AppModelo.Model.Infra.Repositories;
+﻿using AppModelo.Model.Domain.Entities;
+using AppModelo.Model.Infra.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,5 +16,12 @@ namespace AppModelo.Controller.Cadastros
             var resposta = repositorio.Inserir(nome, dataNascimento, sexo, email, telefone, telefone_contato, cep, logradouro, numero, complemento, bairro, municipio, uf, nacionalidade, naturalidade);
             return resposta; 
         }
+
+        public List<FuncionarioEntity> ObterTodosFuncionarios()
+        {
+            var repositorio = new FuncionarioRepository();
+            var resposta = repositorio.ObterFuncionarios();
+            return (List<FuncionarioEntity>)resposta; 
+        } 
     }
 } 

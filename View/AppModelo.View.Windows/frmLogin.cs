@@ -51,6 +51,12 @@ namespace AppModelo.View.Windows.Cadastros
             form.ShowDialog();
         }
 
-     
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            var form = new frmLogin();
+            Close();
+        }
+
+
     }
 }

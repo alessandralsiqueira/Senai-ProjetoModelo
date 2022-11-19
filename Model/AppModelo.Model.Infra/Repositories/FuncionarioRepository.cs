@@ -46,17 +46,16 @@ namespace AppModelo.Model.Infra.Repositories
         {
             return false;
         }
-        public IEnumerable<FuncionarioEntity> ObterTodos()
+        public IEnumerable<FuncionarioEntity> ObterFuncionarios()
         {
-            var sql = "SELECT Id, Descricao FROM nacionalidades ORDER BY descricao ASC";
+            var sql = $"SELECT * FROM funcionario";
+
             using IDbConnection conexaoBd = new MySqlConnection(DataBases.MySql.ConectionString());
+
             var resultado = conexaoBd.Query<FuncionarioEntity>(sql);
+
             return resultado;
-        }
-        public FuncionarioEntity ObterPorId()
-        {
-            return new FuncionarioEntity();
-        }
+        } 
     }
 }
     
