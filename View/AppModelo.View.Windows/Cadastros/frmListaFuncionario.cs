@@ -20,6 +20,7 @@ namespace AppModelo.View.Windows.Cadastros
             InitializeComponent();
             var listaDeFuncionarios = _funcionarioController.ObterTodosFuncionarios();
             gvFuncionario.DataSource = listaDeFuncionarios;
+
         }
     }
 }

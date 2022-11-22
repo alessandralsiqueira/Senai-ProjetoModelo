@@ -48,7 +48,7 @@ namespace AppModelo.Model.Infra.Repositories
         }
         public IEnumerable<FuncionarioEntity> ObterFuncionarios()
         {
-            var sql = $"SELECT * FROM funcionario";
+            var sql = $"SELECT * FROM funcionario ORDER BY id";
 
             using IDbConnection conexaoBd = new MySqlConnection(DataBases.MySql.ConectionString());
 
