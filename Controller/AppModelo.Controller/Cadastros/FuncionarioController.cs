@@ -11,7 +11,7 @@ namespace AppModelo.Controller.Cadastros
     public class FuncionarioController
     {
         /// <summary>
-        /// Instancia objeto do tipo funcionarioRepository enviamdo parametrod advindos do formulario frmCadastro
+        /// Instancia objeto do tipo funcionarioRepository enviando parâmetros advindos do formulário frmCadastro.
         /// </summary>
         /// <param name="nome"></param>
         /// <param name="dataNascimento"></param>
@@ -28,7 +28,7 @@ namespace AppModelo.Controller.Cadastros
         /// <param name="uf"></param>
         /// <param name="nacionalidade"></param>
         /// <param name="naturalidade"></param>
-        /// <returns></returns>Retorna uma variavel que contem os parametros nrcessarios para a instanciação do metodo FuncionarioRepository
+        /// <returns>Retorna uma variável que contém os parâmetros necessários para a instanciação do método Inserir no FuncionarioRepository</returns>
         public bool Cadastrar(string nome, DateTime dataNascimento, bool sexo, string email, string telefone, string telefone_contato, string cep, string logradouro, int numero, string complemento, string bairro, string municipio, string uf, int nacionalidade, int naturalidade)
         {
             var repositorio = new FuncionarioRepository();
@@ -36,6 +36,10 @@ namespace AppModelo.Controller.Cadastros
             return resposta; 
         }
 
+        /// <summary>
+        /// List - Instancia uma List FuncionarioEntity e busca o repositório onde se encontram as informações.
+        /// </summary>
+        /// <returns>Chama a lista que se encontra registrada no banco de dados e faz uma lista de todos os funcionários</returns>
         public List<FuncionarioEntity> ObterTodosFuncionarios()
         {
             var repositorio = new FuncionarioRepository();
