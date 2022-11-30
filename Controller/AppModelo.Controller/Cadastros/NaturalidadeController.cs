@@ -25,7 +25,7 @@ namespace AppModelo.Controller.Cadastros
         /// <summary>
         /// Método público que retorna uma lista do tipo NaturalidadeEntity
         /// </summary>
-        /// <returns> Este método preenche uma lista advinda do NaturalidadeRepository</returns>
+        /// <returns>Este método preenche uma lista advinda do NaturalidadeRepository</returns>
         public List<NaturalidadeEntity> ObterTodasNaturalidades()
         {
             var repositorio = new NaturalidadeRepository();

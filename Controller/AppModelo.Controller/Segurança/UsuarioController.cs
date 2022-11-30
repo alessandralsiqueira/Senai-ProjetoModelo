@@ -6,6 +6,12 @@ namespace AppModelo.Controller.Segurança
 {
     public class UsuarioController
     {
+        /// <summary>
+        /// Método público que efetua login do usuário utilizando usuário e senha.
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <param name="senha"></param>
+        /// <returns>Este método efetua login do usuário chamando do UsuarioRepository</returns>
         public bool EfetuarLogin(string usuario, string senha)
         {
             var repositorio = new UsuarioRepository();
@@ -21,6 +27,11 @@ namespace AppModelo.Controller.Segurança
             }
         }
 
+        /// <summary>
+        /// Método público que recupera senha do usuário utilizando o parâmetro email.
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns>Este método efetua a recuperação de senha do usuário chamando do UsuarioRepository</returns>
         public string RecuperarSenha(string email)
         {
             // 1 PASSO VERIFICAR SE É UM EMAIL VÁLIDO

@@ -8,6 +8,9 @@ namespace AppModelo.Model.Domain.Validators
 {
     public static partial class Validadores
     {
+        /// <summary>
+        /// Método que avalia o número de CPF inserido pelo usuário.
+        /// </summary>
         public struct Cpf
         {
             private readonly string _value;
@@ -98,6 +101,12 @@ namespace AppModelo.Model.Domain.Validators
 
             public override string ToString() => _value;
         }
+
+        /// <summary>
+        /// Método que valida o cpf inserido.
+        /// </summary>
+        /// <param name="sourceCPF"></param>
+        /// <returns>Retorna dizendo se o cpf é válido ou não</returns>
         public static bool ValidarCPF(Cpf sourceCPF) =>
             sourceCPF.EhValido;
     }
