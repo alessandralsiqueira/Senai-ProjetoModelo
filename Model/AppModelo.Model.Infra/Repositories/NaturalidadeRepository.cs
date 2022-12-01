@@ -9,6 +9,12 @@ namespace AppModelo.Model.Infra.Repositories
 {
     public class NaturalidadeRepository
     {
+        /// <summary>
+        /// Este método público insere uma nova Naturalidade.
+        /// </summary>
+        /// <param name="descricao"></param>
+        /// <param name="status"></param>
+        /// <returns>Insere a Naturalidade no banco de dados</returns>
         public bool Inserir(string descricao, bool status) 
         {
             var agora = DateTime.Now.ToString("u");

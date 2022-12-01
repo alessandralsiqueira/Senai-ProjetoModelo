@@ -45,6 +45,20 @@ namespace AppModelo.Controller.Cadastros
             var repositorio = new FuncionarioRepository();
             var resposta = repositorio.ObterFuncionarios();
             return (List<FuncionarioEntity>)resposta; 
-        } 
+        }
+
+        public bool Atualizar(int id, string nome)
+        {
+            var repositorio = new FuncionarioRepository();
+            var resposta = repositorio.Atualizar(id, nome);
+            return resposta;
+        }
+
+        public bool Remover(string id)
+        {
+            var repositorio = new NacionalidadeRepository();
+            var resposta = repositorio.Remover(id);
+            return resposta;
+        }
     }
 } 

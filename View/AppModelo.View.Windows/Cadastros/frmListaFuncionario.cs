@@ -22,5 +22,15 @@ namespace AppModelo.View.Windows.Cadastros
             gvFuncionario.DataSource = listaDeFuncionarios;
 
         }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
