@@ -1,13 +1,7 @@
-﻿  using AppModelo.Controller.Segurança;
+﻿using AppModelo.Controller.Segurança;
 using AppModelo.Model.Domain.Validators;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppModelo.View.Windows.Cadastros
@@ -62,13 +56,24 @@ namespace AppModelo.View.Windows.Cadastros
         private void lblEsqueciMinhaSenha_Click(object sender, EventArgs e)
         {
             var form = new frmRecuperarSenha();
-            form.ShowDialog();
+            form.Show();
+            this.Hide();
         }
 
         private void btnFechar_Click_1(object sender, EventArgs e)
         {
             var form = new frmLogin();
             Close();
+        }
+
+        private void btnFechar_MouseHover(object sender, EventArgs e)
+        {
+            btnFechar.BackColor = Color.FromArgb(170, 57, 57);
+        }
+
+        private void btnFechar_MouseLeave(object sender, EventArgs e)
+        {
+            btnFechar.BackColor = Color.White;
         }
     }
 }

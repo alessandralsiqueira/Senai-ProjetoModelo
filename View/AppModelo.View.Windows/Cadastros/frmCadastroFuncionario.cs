@@ -10,9 +10,27 @@ namespace AppModelo.View.Windows.Cadastros
 {
     public partial class frmCadastroFuncionario : Form
     {
+        /// <summary>
+        /// Instancia a classe FuncionarioController em uma propriedade para utilizá-la onde necessário.
+        /// </summary>
         private FuncionarioController _funcionarioController = new FuncionarioController();
+       
+        /// <summary>
+        /// Instancia a classe NacionalidadeController em uma propriedade para utilizá-la onde necessário.
+        /// </summary>
         private NacionalidadeController _nacionalidadeController = new NacionalidadeController();
+        
+        /// <summary>
+        /// Instancia a classe NaturalidadeController em uma propriedade para utilizá-la onde necessário.
+        /// </summary>
         private NaturalidadeController _naturalidadeController = new NaturalidadeController();
+
+        /// <summary>
+        /// <summary>
+        /// Class <c>frmCadastroFuncionario</c> construtor chama o metódo FormatarCamposObrigatorios para indicar
+        /// o usuário quais os campos são obrigatórios o preenchimento.
+        /// Também chama o metódo ObterTodasNacionalidades/ObterTodasNaturalidades dentro de uma combobox.
+        /// </summary>
         public frmCadastroFuncionario()
         {
             InitializeComponent();
@@ -195,12 +213,19 @@ namespace AppModelo.View.Windows.Cadastros
 
                     LimparDados(c);
                 }
-
             }
-
-
+        }
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            var form = new frmPrincipal();
+            form.Show();
+            this.Hide();
         }
 
-
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            var form = new frmCadastroFuncionario();
+            Close();
+        }
     }
 }

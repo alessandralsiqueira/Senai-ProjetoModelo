@@ -21,7 +21,10 @@ namespace AppModelo.View.Windows.Cadastros
 
         private void btnRecuperarSenha_Click(object sender, EventArgs e)
         {
-            var emailEhValido = Validadores.EmailEValido(txtEmail.Text);
+            var email = txtEmail.Text;
+
+            var emailEhValido = Validadores.EmailEValido(email);
+
             if (emailEhValido is false)
             {
                 errorProvider1.SetError(txtEmail, "Seu email está errado.");
@@ -39,9 +42,21 @@ namespace AppModelo.View.Windows.Cadastros
             Close();
         }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            var form = new frmLogin();
+            form.Show();
+            this.Hide();
+        }
+
         private void btnCancelar_MouseHover(object sender, EventArgs e)
         {
             btnCancelar.BackColor = Color.FromArgb(13, 108, 139);
+        }
+
+        private void btnCancelar_MouseLeave(object sender, EventArgs e)
+        {
+            btnCancelar.BackColor = Color.FromArgb(255, 255, 255);
         }
     }
 }

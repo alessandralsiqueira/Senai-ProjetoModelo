@@ -46,7 +46,7 @@ namespace AppModelo.Controller.Segurança
             var atualizouSenha = repositorio.AtualizarSenha(email, novaSenha);
             if(atualizouSenha is false)
             {
-                return "Programador fez errado "; 
+                return "Houve um erro ao alterar sua senha no banco de dados."; 
             }
             // 3 PASSO MANDAR A NOVA SENHA PARA O EMAIL
             var emailService = new EmailService();

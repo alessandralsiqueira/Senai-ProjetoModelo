@@ -24,7 +24,10 @@ namespace AppModelo.Model.Infra.Repositories
             var resultado = conexaoBd.Execute(sql);
             return resultado > 0;
         }
-
+        /// <summary>
+        /// Este método exibe a naturalidade cadastrada em lista.
+        /// </summary>
+        /// <returns>Mostrar a naturalidade cadastrada na forma de lista no DataGridView</returns>
         public IEnumerable<NaturalidadeEntity> ObterTodos()
         {
             var sql = "SELECT id, descricao, dataAlteracao, ativo FROM naturalidade ORDER BY descricao ASC";
@@ -35,7 +38,7 @@ namespace AppModelo.Model.Infra.Repositories
 
             return resultado; 
         } 
-
+       
         public IEnumerable<NaturalidadeEntity> ObterTodosAtivos()
         {
             var sql = "SELECT id, descricao, dataAlteracao, ativo FROM naturalidade ORDER BY descricao ASC WHERE ativo = true";
@@ -46,14 +49,30 @@ namespace AppModelo.Model.Infra.Repositories
 
             return resultado; 
         }
-
-        public bool Atualizar()
+        /// <summary>
+        /// Este método atualiza a naturalidade cadastrada.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="descricao"></param>
+        /// <returns>Atualiza a naturalidade no banco de dados</returns>
+        public bool Atualizar(int id, string descricao)
         {
-            return false;
+            var sql = $"UPDATE naturalidade SET descricao = ('{descricao}') WHERE id = ('{id}')";
+            using IDbConnection conexaoBd = new MySqlConnection(DataBases.MySql.ConectionString());
+            var resultado = conexaoBd.Execute(sql);
+            return resultado > 0;
         }
-        public bool Remover()
+        /// <summary>
+        /// Este método apaga a naturalidade cadastrada.
+        /// </summary>
+        /// <param name="descricao"></param>
+        /// <returns>Deleta a naturalidade no banco de dados</returns>
+        public bool Remover (string descricao)
         {
-            return false;
+            var sql = $"DELETE FROM naturalidade WHERE (descricao) = ('{descricao}')";
+            using IDbConnection conexaoBd = new MySqlConnection(DataBases.MySql.ConectionString());
+            var resultado = conexaoBd.Execute(sql);
+            return resultado > 0;
         }
 
         public NaturalidadeEntity ObterPorId()

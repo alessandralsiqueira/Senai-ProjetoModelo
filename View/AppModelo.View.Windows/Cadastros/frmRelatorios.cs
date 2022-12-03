@@ -1,5 +1,4 @@
-﻿
-using AppModelo.Controller.Cadastros;
+﻿using AppModelo.Controller.Cadastros;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,25 +11,13 @@ using System.Windows.Forms;
 
 namespace AppModelo.View.Windows.Cadastros
 {
-    public partial class frmListaFuncionario : Form
+    public partial class frmRelatorios : Form
     {
         private FuncionarioController _funcionarioController = new FuncionarioController();
-        public frmListaFuncionario()
+        public frmRelatorios()
         {
             InitializeComponent();
-            var listaDeFuncionarios = _funcionarioController.ObterTodosFuncionarios();
-            gvFuncionario.DataSource = listaDeFuncionarios;
-
-        }
-
-        private void btnAtualizar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-
+            dgvRelatorioFuncionarios.DataSource = _funcionarioController.ObterTodosFuncionarios();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -42,7 +29,7 @@ namespace AppModelo.View.Windows.Cadastros
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
-            var form = new frmListaFuncionario();
+            var form = new frmRelatorios();
             Close();
         }
     }

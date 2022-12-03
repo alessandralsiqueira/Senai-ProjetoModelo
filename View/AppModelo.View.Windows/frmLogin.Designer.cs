@@ -87,13 +87,13 @@
             // 
             this.btnLogar.BackColor = System.Drawing.Color.Blue;
             this.btnLogar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogar.Font = new System.Drawing.Font("Segoe UI Historic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogar.Font = new System.Drawing.Font("Segoe UI Historic", 12F);
             this.btnLogar.ForeColor = System.Drawing.Color.White;
             this.btnLogar.Location = new System.Drawing.Point(42, 250);
             this.btnLogar.Name = "btnLogar";
             this.btnLogar.Size = new System.Drawing.Size(184, 46);
             this.btnLogar.TabIndex = 4;
-            this.btnLogar.Text = "Entrar ";
+            this.btnLogar.Text = "ENTRAR";
             this.btnLogar.UseVisualStyleBackColor = false;
             this.btnLogar.Click += new System.EventHandler(this.btnLogar_Click_1);
             // 
@@ -147,6 +147,8 @@
             this.btnFechar.TabIndex = 10;
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click_1);
+            this.btnFechar.MouseLeave += new System.EventHandler(this.btnFechar_MouseLeave);
+            this.btnFechar.MouseHover += new System.EventHandler(this.btnFechar_MouseHover);
             // 
             // frmLogin
             // 

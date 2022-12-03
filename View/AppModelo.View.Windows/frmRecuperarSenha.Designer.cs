@@ -36,6 +36,7 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,11 +62,13 @@
             // 
             // btnRecuperarSenha
             // 
-            this.btnRecuperarSenha.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnRecuperarSenha.BackColor = System.Drawing.Color.Blue;
+            this.btnRecuperarSenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRecuperarSenha.Font = new System.Drawing.Font("Segoe UI Historic", 12F);
-            this.btnRecuperarSenha.Location = new System.Drawing.Point(23, 156);
+            this.btnRecuperarSenha.ForeColor = System.Drawing.Color.White;
+            this.btnRecuperarSenha.Location = new System.Drawing.Point(44, 161);
             this.btnRecuperarSenha.Name = "btnRecuperarSenha";
-            this.btnRecuperarSenha.Size = new System.Drawing.Size(212, 36);
+            this.btnRecuperarSenha.Size = new System.Drawing.Size(169, 36);
             this.btnRecuperarSenha.TabIndex = 2;
             this.btnRecuperarSenha.Text = "RECUPERAR ACESSO";
             this.btnRecuperarSenha.UseVisualStyleBackColor = false;
@@ -101,6 +104,20 @@
             this.btnCancelar.TabIndex = 12;
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnCancelar.MouseLeave += new System.EventHandler(this.btnCancelar_MouseLeave);
+            this.btnCancelar.MouseHover += new System.EventHandler(this.btnCancelar_MouseHover);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ControlText;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Historic", 12F);
+            this.label2.ForeColor = System.Drawing.Color.Yellow;
+            this.label2.Location = new System.Drawing.Point(19, 73);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 21);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Email:";
             // 
             // frmRecuperarSenha
             // 
@@ -108,6 +125,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(278, 233);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnRecuperarSenha);
@@ -130,5 +148,6 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label label2;
     }
 }

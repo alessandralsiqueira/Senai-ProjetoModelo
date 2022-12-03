@@ -51,5 +51,18 @@ namespace AppModelo.View.Windows.Cadastros
             var descricaoAtual = _nacionalidadeController.Atualizar(idAtual, txtDescricao.Text);
             
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            var form = new frmPrincipal();
+            form.Show();
+            this.Hide();
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            var form = new frmNacionalidades();
+            Close();
+        }
     }
 }

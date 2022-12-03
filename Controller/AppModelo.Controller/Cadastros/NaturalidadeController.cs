@@ -23,6 +23,31 @@ namespace AppModelo.Controller.Cadastros
         }
 
         /// <summary>
+        /// Atualiza uma Naturalidade no NaturalidadeRepository.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="descricao"></param>
+        /// <returns>Atualiza a Naturalidade cadastrada no banco de dados</returns>
+        public bool Atualizar(int id, string descricao)
+        {
+            var repositorio = new NaturalidadeRepository();
+            var resposta = repositorio.Atualizar(id, descricao);
+            return resposta;
+        }
+
+        /// <summary>
+        /// Remove uma Naturalidade no NaturalidadeRepository.
+        /// </summary>
+        /// <param name="descricao"></param>
+        /// <returns>Deleta a Naturalidade cadastrada no banco de dados</returns>
+        public bool Remover(string descricao)
+        {
+            var repositorio = new NaturalidadeRepository();
+            var resposta = repositorio.Remover(descricao);
+            return resposta;
+        }
+
+        /// <summary>
         /// Método público que retorna uma lista do tipo NaturalidadeEntity
         /// </summary>
         /// <returns>Este método preenche uma lista advinda do NaturalidadeRepository</returns>

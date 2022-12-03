@@ -27,7 +27,51 @@ namespace AppModelo.View.Windows.Cadastros
             var controller = new NaturalidadeController();
             var descricaoMauiscula = txtDescricao.Text.ToUpper();
 
-            var resposta = controller.Cadastrar(descricaoMauiscula, chkStatus.Checked);
+            var salvou = controller.Cadastrar(descricaoMauiscula, chkStatus.Checked);
+            if (salvou)
+            {
+                MessageBox.Show("Naturalidade incluída com sucesso!");
+                txtDescricao.Text = string.Empty;
+            }
+            else
+            {
+                MessageBox.Show("Houve um erro ao salvar no banco de dados.");
+            }
         }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            var idAtual = int.Parse(txtId.Text);
+            var controller = new NaturalidadeController();
+            var descricaoAtual = _naturalidadeController.Atualizar(idAtual, txtDescricao.Text);
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            var control = new NaturalidadeController();
+            var removeu = _naturalidadeController.Remover(txtDescricao.Text);
+            if (removeu)
+            {
+                MessageBox.Show("Naturalidade excluída com sucesso!");
+                txtDescricao.Text = string.Empty;
+            }
+            else
+            {
+                MessageBox.Show("Houve um erro ao excluir no banco de dados.");
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            var form = new frmPrincipal();
+            form.Show();
+            this.Hide();    
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            var form = new frmNaturalidade();
+            Close();
+        }     
     }
 }
