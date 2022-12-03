@@ -120,4 +120,21 @@
   <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnCancelar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EAAACxABrSO9dQAAAHVJREFUSEtjGAWjgKbABIgtIUzqA1cg/gbEq8A8KgOY4ReBWAQkQE0wdA0HRSjI
+        8P9AfBaId1OIdwKxPRDDgSkQfwdikAWngRibJlIwhgUgAAui80AsDBKgBaC7JVSPbBhwA2KQJSvAPBoB
+        mhYVo2AUEAsYGAC3gTCYm9gJcgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnFechar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAJBJREFUSEvtlFEKgCAQRL1EUfc/Sn/RV0FBHaZmooWQZTG1n/LBg6x1BhJ0hf/S
+        wQHW58qGM5zlnmB6uMMJWiX8xhnOck8wFRwhNy6whT7+TAMfYZUkhwtaSbZw4R64wvl6zhIusESC6Qaz
+        hROtQDv4KKxflFyiHaj/LrpECxeSS6xwIank9avi9cuu8BmcOwCH0EYh5CGxBgAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>

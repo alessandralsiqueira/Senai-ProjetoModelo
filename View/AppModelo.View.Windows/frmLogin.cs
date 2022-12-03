@@ -14,35 +14,49 @@ namespace AppModelo.View.Windows.Cadastros
 {
     public partial class frmLogin : Form
     {
+        //Crio uma variável global para colocar no txtEmail
+        public static string SetNomeUsuario = "";
+        public static string HoraLogin = "";
         public frmLogin()
         {
-            InitializeComponent(); 
+            InitializeComponent();
+            txtEmail.Text = "alessandra@email.com";
+            txtSenha.Text = "123456Al";
+
+            HoraLogin = DateTime.Now.ToString("u");
         }
 
-        private void btnLogar_Click(object sender, EventArgs e)
+        private void btnLogar_Click_1(object sender, EventArgs e)
         {
             // 1 passo validar o email
-            var emailEhValido = Validadores.EmailEValido(txtEmail.Text);
-            if(emailEhValido is false)
+            var email = txtEmail.Text;
+            var emailEhValido = Validadores.EmailEValido(email);
+
+            if (emailEhValido is false)
             {
-                errorProvider1.SetError(txtEmail, "Seu email está errado.");
+                errorProvider1.SetError(txtEmail, "E-mail inválido!");
                 txtEmail.Focus();
-                return; 
+                return;
             }
+            errorProvider1.SetError(txtEmail, "");
 
             var controller = new UsuarioController();
             var usuarioEncontrado = controller.EfetuarLogin(txtEmail.Text, txtSenha.Text);
-            if(usuarioEncontrado)
+
+            if (usuarioEncontrado)
             {
-                var form = new frmPrincipal(); 
+                //Coloco o txtEmail dentro da variável global para passar para o frmPrincipal
+                SetNomeUsuario = txtEmail.Text;
+
+                var form = new frmPrincipal();
                 form.Show();
                 this.Hide();
-
-            } 
+            }
             else
             {
                 MessageBox.Show("Usuário ou senha não encontrado!");
             }
+
         }
 
         private void lblEsqueciMinhaSenha_Click(object sender, EventArgs e)
@@ -51,12 +65,10 @@ namespace AppModelo.View.Windows.Cadastros
             form.ShowDialog();
         }
 
-        private void btnFechar_Click(object sender, EventArgs e)
+        private void btnFechar_Click_1(object sender, EventArgs e)
         {
             var form = new frmLogin();
             Close();
         }
-
-
     }
 }

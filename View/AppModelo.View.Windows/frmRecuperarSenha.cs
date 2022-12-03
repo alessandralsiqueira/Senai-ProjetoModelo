@@ -31,7 +31,17 @@ namespace AppModelo.View.Windows.Cadastros
             var controller = new UsuarioController();
             var resultado = controller.RecuperarSenha(txtEmail.Text);
             MessageBox.Show(resultado);
-        } 
-        
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            var form = new frmRecuperarSenha();
+            Close();
+        }
+
+        private void btnCancelar_MouseHover(object sender, EventArgs e)
+        {
+            btnCancelar.BackColor = Color.FromArgb(13, 108, 139);
+        }
     }
 }
