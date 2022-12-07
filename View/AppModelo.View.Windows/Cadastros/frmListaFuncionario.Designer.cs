@@ -83,16 +83,16 @@
             // txtId
             // 
             this.txtId.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.txtId.Location = new System.Drawing.Point(137, 413);
+            this.txtId.Location = new System.Drawing.Point(12, 413);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(152, 25);
+            this.txtId.Size = new System.Drawing.Size(100, 25);
             this.txtId.TabIndex = 3;
             // 
             // lblId
             // 
             this.lblId.AutoSize = true;
             this.lblId.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.lblId.Location = new System.Drawing.Point(36, 391);
+            this.lblId.Location = new System.Drawing.Point(12, 391);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(21, 19);
             this.lblId.TabIndex = 4;
@@ -102,7 +102,7 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.lblNome.Location = new System.Drawing.Point(137, 391);
+            this.lblNome.Location = new System.Drawing.Point(119, 391);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(46, 19);
             this.lblNome.TabIndex = 5;
@@ -111,9 +111,9 @@
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.txtNome.Location = new System.Drawing.Point(31, 413);
+            this.txtNome.Location = new System.Drawing.Point(123, 413);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(100, 25);
+            this.txtNome.Size = new System.Drawing.Size(208, 25);
             this.txtNome.TabIndex = 6;
             // 
             // panel1

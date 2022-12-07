@@ -48,8 +48,7 @@ namespace AppModelo.View.Windows.Cadastros
         {
             var idAtual = int.Parse(txtId.Text); 
             var controller = new NacionalidadeController();
-            var descricaoAtual = _nacionalidadeController.Atualizar(idAtual, txtDescricao.Text);
-            
+            var descricaoAtual = _nacionalidadeController.Atualizar(idAtual, txtDescricao.Text);           
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
