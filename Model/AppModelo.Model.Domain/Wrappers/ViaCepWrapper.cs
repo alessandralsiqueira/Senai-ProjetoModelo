@@ -8,6 +8,9 @@ namespace AppModelo.Model.Domain.Wrappers
 {
     public class ViaCepWrapper: EntidadeBase
     {
+        /// <summary>
+        /// E um invólucro que adiciona funcionalidades a outras classes.
+        /// </summary>
         public string Cep { get; set; } 
         public string Logradouro { get; set; }
         public string Complemento { get; set; }

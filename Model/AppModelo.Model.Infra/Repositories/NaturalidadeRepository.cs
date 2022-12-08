@@ -78,8 +78,13 @@ namespace AppModelo.Model.Infra.Repositories
         public NaturalidadeEntity ObterPorId()
         {
             return new NaturalidadeEntity();
-        } 
+        }
 
+        /// <summary>
+        /// Este método exibe a descrição da naturalidade cadastrada em lista.
+        /// </summary>
+        /// <param name="descricao"></param>
+        /// <returns>Mostrar a descrição na forma de lista no DataGridView</returns>
         public NaturalidadeEntity ObterPorDescricao(string descricao)
         {
             var sql = $"SELECT id, descricao FROM naturalidade WHERE descricao = '{descricao}'";

@@ -72,21 +72,21 @@
             // funcionáriosToolStripMenuItem
             // 
             this.funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
-            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(175, 24);
             this.funcionáriosToolStripMenuItem.Text = "Funcionários";
             this.funcionáriosToolStripMenuItem.Click += new System.EventHandler(this.funcionáriosToolStripMenuItem_Click);
             // 
             // nacionalidadeToolStripMenuItem1
             // 
             this.nacionalidadeToolStripMenuItem1.Name = "nacionalidadeToolStripMenuItem1";
-            this.nacionalidadeToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
+            this.nacionalidadeToolStripMenuItem1.Size = new System.Drawing.Size(175, 24);
             this.nacionalidadeToolStripMenuItem1.Text = "Nacionalidade";
             this.nacionalidadeToolStripMenuItem1.Click += new System.EventHandler(this.nacionalidadeToolStripMenuItem1_Click);
             // 
             // naturalidadeToolStripMenuItem1
             // 
             this.naturalidadeToolStripMenuItem1.Name = "naturalidadeToolStripMenuItem1";
-            this.naturalidadeToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
+            this.naturalidadeToolStripMenuItem1.Size = new System.Drawing.Size(175, 24);
             this.naturalidadeToolStripMenuItem1.Text = "Naturalidade";
             this.naturalidadeToolStripMenuItem1.Click += new System.EventHandler(this.naturalidadeToolStripMenuItem1_Click);
             // 

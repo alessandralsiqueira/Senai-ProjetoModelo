@@ -2,9 +2,6 @@
 using AppModelo.Model.Infra.Repositories;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AppModelo.Controller.Cadastros
 {
@@ -47,6 +44,12 @@ namespace AppModelo.Controller.Cadastros
             return (List<FuncionarioEntity>)resposta; 
         }
 
+        /// <summary>
+        /// Atualiza o cadastro de um funcionário no FuncionarioRepository
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="nome"></param>
+        /// <returns>Atualiza o cadastro de um funcionário no banco de dados</returns>
         public bool Atualizar(int id, string nome)
         {
             var repositorio = new FuncionarioRepository();
@@ -54,9 +57,14 @@ namespace AppModelo.Controller.Cadastros
             return resposta;
         }
 
-        public bool Remover(string id)
+        /// <summary>
+        /// Exclui o cadastro de um funcionário no FuncionarioRepository
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Exclui o cadastro de um funcionário no banco de dados</returns>
+        public bool Remover(int id)
         {
-            var repositorio = new NacionalidadeRepository();
+            var repositorio = new FuncionarioRepository();
             var resposta = repositorio.Remover(id);
             return resposta;
         }

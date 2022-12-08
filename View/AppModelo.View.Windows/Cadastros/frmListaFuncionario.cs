@@ -25,8 +25,9 @@ namespace AppModelo.View.Windows.Cadastros
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            var converter = int.Parse(txtId.Text);
             var control = new FuncionarioController();
-            var removeu = _funcionarioController.Remover(txtNome.Text);
+            var removeu = _funcionarioController.Remover(converter);
             if (removeu)
             {
                 MessageBox.Show("Funcionário excluído com sucesso!");

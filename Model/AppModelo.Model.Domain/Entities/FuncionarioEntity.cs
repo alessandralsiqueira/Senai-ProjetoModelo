@@ -8,6 +8,9 @@ namespace AppModelo.Model.Domain.Entities
 {
     public class FuncionarioEntity
     {
+        /// <summary>
+        /// Instancia todas as propriedades da classe FuncionarioEntity.
+        /// </summary>
         public int Id { get; set; }
         public string NomeCompleto { get; set; }
         public DateTime DataNascimento { get; set; }

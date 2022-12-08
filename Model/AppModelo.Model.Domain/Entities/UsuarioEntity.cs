@@ -8,6 +8,9 @@ namespace AppModelo.Model.Domain.Entities
 {
     public class UsuarioEntity
     {
+        /// <summary>
+        /// Instancia todas as propriedades da classe UsuarioEntity.
+        /// </summary>
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Email { get; set; }

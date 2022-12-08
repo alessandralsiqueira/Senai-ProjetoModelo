@@ -38,13 +38,24 @@ namespace AppModelo.Model.Infra.Repositories
 
             return resultado > 0;
         }
+        /// <summary>
+        /// Este método atualiza o funcionário cadastrado.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="nome"></param>
+        /// <returns>Atualiza o funcionário cadastrado no banco de dados</returns>
         public bool Atualizar(int id, string nome)
         {
-            var sql = $"UPDATE funcionario SET nome = ('{nome}') WHERE id = ('{id}')";
+            var sql = $"UPDATE funcionario SET nomeCompleto = ('{nome}') WHERE id = ('{id}')";
             using IDbConnection conexaoBd = new MySqlConnection(DataBases.MySql.ConectionString());
             var resultado = conexaoBd.Execute(sql);
             return resultado > 0;
         }
+        /// <summary>
+        /// Este método exclui o funcionário cadastrado.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Exclui o funcionário cadastrado no banco de dados</returns>
         public bool Remover(int id)
         {
             var sql = $"DELETE FROM funcionario WHERE (id) = ('{id}')";
@@ -52,6 +63,10 @@ namespace AppModelo.Model.Infra.Repositories
             var resultado = conexaoBd.Execute(sql);
             return resultado > 0;
         }
+        /// <summary>
+        /// Este método exibe os funcionários cadastrados em lista.
+        /// </summary>
+        /// <returns>Mostrar os funcionarios cadastrados na forma de lista no DataGridView</returns>
         public IEnumerable<FuncionarioEntity> ObterFuncionarios()
         {
             var sql = $"SELECT * FROM funcionario ORDER BY id";
@@ -61,8 +76,8 @@ namespace AppModelo.Model.Infra.Repositories
             var resultado = conexaoBd.Query<FuncionarioEntity>(sql);
 
             return resultado;
-        } 
+        }
     }
 }
-    
+
 
