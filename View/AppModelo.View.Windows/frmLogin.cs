@@ -20,6 +20,11 @@ namespace AppModelo.View.Windows.Cadastros
             HoraLogin = DateTime.Now.ToString("u");
         }
 
+        /// <summary>
+        /// Método criado para login do usuário através da verificação de email e senha já cadastrados.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLogar_Click_1(object sender, EventArgs e)
         {
             // 1 passo validar o email
@@ -53,6 +58,11 @@ namespace AppModelo.View.Windows.Cadastros
 
         }
 
+        /// <summary>
+        /// Chama o frmRecuperarSenha para o usuário executar a recuperação de senha.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lblEsqueciMinhaSenha_Click(object sender, EventArgs e)
         {
             var form = new frmRecuperarSenha();
@@ -60,6 +70,11 @@ namespace AppModelo.View.Windows.Cadastros
             this.Hide();
         }
 
+        /// <summary>
+        /// Evento criado para fechar o frmLogin.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnFechar_Click_1(object sender, EventArgs e)
         {
             var form = new frmLogin();

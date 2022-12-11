@@ -6,6 +6,9 @@ namespace AppModelo.View.Windows.Cadastros
 {
     public partial class frmNacionalidades : Form
     {
+        /// <summary>
+        /// Instancia a classe NacionalidadeController em uma propriedade para utilizá-la onde necessário.
+        /// </summary>
         private NacionalidadeController _nacionalidadeController = new NacionalidadeController();
         public frmNacionalidades()
         {
@@ -14,6 +17,11 @@ namespace AppModelo.View.Windows.Cadastros
             gvNacionalidades.DataSource = listaDeNacionalidades;
         }
 
+        /// <summary>
+        /// Instancia o método NacionalidadeController, para cadastrar uma nova Nacionalidade.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             var controller = new NacionalidadeController();
@@ -29,6 +37,11 @@ namespace AppModelo.View.Windows.Cadastros
             }
         }
 
+        /// <summary>
+        /// Instancia o método NacionalidadeController, para excluir uma Nacionalidade cadastrada.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             var control = new NacionalidadeController();
@@ -44,6 +57,11 @@ namespace AppModelo.View.Windows.Cadastros
             }
         }
 
+        /// <summary>
+        /// Instancia o método NacionalidadeController, para atualizar uma Nacionalidade cadastrada.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
             var idAtual = int.Parse(txtId.Text); 
@@ -51,6 +69,11 @@ namespace AppModelo.View.Windows.Cadastros
             var descricaoAtual = _nacionalidadeController.Atualizar(idAtual, txtDescricao.Text);           
         }
 
+        /// <summary>
+        /// Evento criado para retornar ao frmPrincipal.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             var form = new frmPrincipal();
@@ -58,6 +81,11 @@ namespace AppModelo.View.Windows.Cadastros
             this.Hide();
         }
 
+        /// <summary>
+        /// Evento criado para fechar o frmNacionalidades.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnFechar_Click(object sender, EventArgs e)
         {
             var form = new frmNacionalidades();

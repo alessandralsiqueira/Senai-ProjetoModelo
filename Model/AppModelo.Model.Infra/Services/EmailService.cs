@@ -8,6 +8,14 @@ namespace AppModelo.Model.Infra.Services
 {
     public class EmailService
     {
+        /// <summary>
+        /// Método público criado utilizando os parâmetros "nome, email, assunto, mensagem"; para envio de emails
+        /// </summary>
+        /// <param name="nome"></param>
+        /// <param name="email"></param>
+        /// <param name="assunto"></param>
+        /// <param name="mensagem"></param>
+        /// <returns>Método criado para envio de emails</returns>
         public bool EnviarEmail(string nome, string email,string assunto, string mensagem)
         {
             try

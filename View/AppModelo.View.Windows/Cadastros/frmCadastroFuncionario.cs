@@ -44,7 +44,11 @@ namespace AppModelo.View.Windows.Cadastros
             cmbNaturalidade.DisplayMember = "Descricao";
             cmbNaturalidade.ValueMember = "Id";
         }
-
+        /// <summary>
+        /// Faz a pesquisa de números de cep válidos.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnPesquisarCep_Click(object sender, EventArgs e)
         {
             //Crio a instância do Controllador
@@ -58,7 +62,11 @@ namespace AppModelo.View.Windows.Cadastros
             txtEnderecoMunicipio.Text = endereco.Localidade;
             txtEnderecoUf.Text = endereco.Uf;
         }
-
+        /// <summary>
+        /// Faz a verificação se há somente letras no nome cadastrado.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtNome_Validating(object sender, CancelEventArgs e)
         {
             if (txtNome.Text.Length < 6)
@@ -80,7 +88,11 @@ namespace AppModelo.View.Windows.Cadastros
             }
             errorProvider.Clear();
         }
-
+        /// <summary>
+        /// Faz a verificação se o número de CPF é válido.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtCpf_Validating(object sender, CancelEventArgs e)
         {
             var cpf = txtCpf.Text;
@@ -93,7 +105,11 @@ namespace AppModelo.View.Windows.Cadastros
             errorProvider.Clear();
 
         }
-
+        /// <summary>
+        /// Faz a verificação se o email é válido.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtEmail_Validating(object sender, CancelEventArgs e)
         {
             var email = txtEmail.Text;
@@ -113,6 +129,11 @@ namespace AppModelo.View.Windows.Cadastros
             //DataTime.Now.AddDays(1);
         }
 
+        /// <summary>
+        /// Utiliza a propriedade _funcionarioController, para cadastrar um novo funcionário.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSalvarCadastro_Click(object sender, EventArgs e)
         {
             var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
@@ -138,6 +159,11 @@ namespace AppModelo.View.Windows.Cadastros
 
         }
 
+        /// <summary>
+        /// Obtém a lista de nacionalidades do frmNacionalidades para o cadastro do funcionário.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmbNacionalidade_SelectedIndexChanged(object sender, EventArgs e)
         {
             var obterIndexNacionalidade = cmbNacionalidade.SelectedIndex;
@@ -145,13 +171,21 @@ namespace AppModelo.View.Windows.Cadastros
             
         }
 
+        /// <summary>
+        /// Obtém a lista de naturalidades do frmNaturalidade para o cadastro do funcionário.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmbNaturalidade_SelectedIndexChanged(object sender, EventArgs e)
         {
             var obterIndexNaturalidade = cmbNaturalidade.SelectedIndex;
             string Index = cmbNaturalidade.Text;
           
         }
-
+        /// <summary>
+        /// Método criado para limpar as textbox após cadastro de funcionário
+        /// </summary>
+        /// <param name="crtl"></param>
         public static void LimparDados(Control crtl)
         {
             foreach (Control c in crtl.Controls)
@@ -215,6 +249,12 @@ namespace AppModelo.View.Windows.Cadastros
                 }
             }
         }
+
+        /// <summary>
+        ///  Evento criado para retornar ao frmPrincipal.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             var form = new frmPrincipal();
@@ -222,6 +262,11 @@ namespace AppModelo.View.Windows.Cadastros
             this.Hide();
         }
 
+        /// <summary>
+        /// Evento criado para fechar o frmCadastroFuncionario.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnFechar_Click(object sender, EventArgs e)
         {
             var form = new frmCadastroFuncionario();

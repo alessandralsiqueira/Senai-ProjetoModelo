@@ -10,7 +10,7 @@ namespace AppModelo.Model.Infra.Repositories
     public class FuncionarioRepository
     {
         /// <summary>
-        /// esse método faz uma inserção no banco de dados com os parâmetros 
+        /// esse método faz uma inserção no banco de dados com os parâmetros abaixo. 
         /// </summary>
         /// <param name="nome"></param>
         /// <param name="dataNascimento"></param>
@@ -27,7 +27,7 @@ namespace AppModelo.Model.Infra.Repositories
         /// <param name="uf"></param>
         /// <param name="nacionalidade"></param>
         /// <param name="naturalidade"></param>
-        /// <returns></returns>
+        /// <returns>Cadastro do funcionário</returns>
         public bool Inserir(string nome, DateTime dataNascimento, bool sexo, string email, string telefone, string telefone_contato, string cep, string logradouro, int numero, string complemento, string bairro, string municipio, string uf, int nacionalidade, int naturalidade)
         {
             var dataConvertida = dataNascimento.ToString("yyyy-MM-dd");

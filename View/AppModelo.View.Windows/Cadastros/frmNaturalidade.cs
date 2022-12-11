@@ -6,6 +6,9 @@ namespace AppModelo.View.Windows.Cadastros
 {
     public partial class frmNaturalidade : Form
     {
+        /// <summary>
+        /// Instancia a classe NaturalidadeController em uma propriedade para utilizá-la onde necessário.
+        /// </summary>
         private NaturalidadeController _naturalidadeController = new NaturalidadeController();
         public frmNaturalidade()
         {
@@ -13,8 +16,13 @@ namespace AppModelo.View.Windows.Cadastros
 
             var listaDeNaturalidade = _naturalidadeController.ObterTodasNaturalidades();
             gvNaturalidade.DataSource = listaDeNaturalidade;
-        } 
+        }
 
+        /// <summary>
+        /// Instancia o método NaturalidadeController, para cadastrar uma nova Naturalidade.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             var temNumero = Helpers.Componentes.ExisteNumeroNoTexto(txtDescricao.Text);
@@ -39,6 +47,11 @@ namespace AppModelo.View.Windows.Cadastros
             }
         }
 
+        /// <summary>
+        /// Instancia o método NaturalidadeController, para atualizar uma Naturalidade cadastrada.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
             var idAtual = int.Parse(txtId.Text);
@@ -46,6 +59,11 @@ namespace AppModelo.View.Windows.Cadastros
             var descricaoAtual = _naturalidadeController.Atualizar(idAtual, txtDescricao.Text);
         }
 
+        /// <summary>
+        /// Instancia o método NaturalidadeController, para excluir uma Naturalidade cadastrada.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             var control = new NaturalidadeController();
@@ -61,6 +79,11 @@ namespace AppModelo.View.Windows.Cadastros
             }
         }
 
+        /// <summary>
+        /// Evento criado para retornar ao frmPrincipal.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             var form = new frmPrincipal();
@@ -68,6 +91,11 @@ namespace AppModelo.View.Windows.Cadastros
             this.Hide();    
         }
 
+        /// <summary>
+        /// Evento criado para fechar o frmNaturalidade.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnFechar_Click(object sender, EventArgs e)
         {
             var form = new frmNaturalidade();
